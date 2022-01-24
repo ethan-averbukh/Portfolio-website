@@ -52,3 +52,65 @@ Inspired by:
 
 
 ##### PostMVP
+
+- Most of the animations
+- Any Icons and images added
+
+
+
+#### Functional Components
+
+##### MVP
+
+| Component | Priority | Estimated Time | Actual Time
+| --------- | -------- | -------------- | 
+| General Layout | High | 1hr | hr
+| Nav Logo | High | 1hr | hr
+| Nav Links | High | 1.5hr | hr
+| Hamburger Menu | High | 2hr | hr
+| Intro Image | High | 1.5hr | hr
+| Intro Bio | High | 1hr | hr
+| Projects: HTML and CSS | High | 3hrs | hr
+| Projects: JS Basics | Lower | 2hrs | hr
+| Skills: HTML and CSS | High | 2hrs | hr
+| Contact: HTML and CSS | High | 2hrs | hr
+| Footer: HTML and CSS | High | 1hr | hr
+| Total | High | 18hrs | hrs
+
+
+
+###### PostMVP
+
+| Component | Priority | Estimated Time | Actual Time
+| --------- | -------- | -------------- | 
+| Site wide: Hovering CSS | High | 1.5hr | hr
+| Nav Logo: Animation | Low | 2hr | hr
+| Hamburger Menu: Animation | High | 2hr | hr
+| Intro Image: Animation | Low | 2.5hr | hr
+| Intro Bio: Fade in | Low | 2hr | hr
+| Projects: Popout Animation | High | 4hrs | hr
+| Skills: Icons | Low | 2hrs | hr
+| Contact: Icons | Low | 2hrs | hr
+| Footer: Icons | Low | 2hr | hr
+| Total | High | 19.5hrs | hrs
+
+
+#### Additional Libraries
+
+The goal is to incorporate Materialize CSS into the site design. These libraries will help my site look so fresh and so clean. 
+
+
+
+#### Code Snippets
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description
+
+`//Here is the code that I will be proud of once it is written`
+
+
+#### Issues and Resolutions
+
+Use this section to list all of the major issues encountered and their resolution.
+
+SAMPLE..... ERROR: app.js:34 
+Uncaught SyntaxError: Unexpected identifier RESOLUTION: Missing comma after first object in sources {} object
