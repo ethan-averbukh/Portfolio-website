@@ -2,7 +2,7 @@
 
 
 ## **Project Description**
-A portfolio website developed to showcase me and some of the projects I have worked on recently. I am using *HTML, CSS, JavaScript, jQuery, AJAX,* and other libraries for styling purposes. The site is intended to focus on user engagement, and dynamic desgin.
+A portfolio website developed to showcase me and some of the projects I have worked on recently. I am using *HTML, CSS, JavaScript, jQuery, AJAX,* and other libraries for styling purposes. The site is intended to focus on user engagement, and dynamic design.
 
 Inspired by:
 
@@ -96,8 +96,7 @@ Inspired by:
 
 ## **Additional Libraries**
 
-The goal is to incorporate Materialize CSS into the site design. These libraries will help my site look so fresh and so clean. 
-
+The goal is to incorporate Materialize CSS into the site design. Other libraries unknown currently, but will be added if used.
 
 
 ## **Code Snippets**
