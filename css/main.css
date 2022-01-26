@@ -1,17 +1,17 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #004056;
-  margin: 0px; }
+  margin: 0px;
+  font-size: 14px; }
 
 .top-nav-bar {
   display: grid;
-  grid-template: 1fr / 2fr 1fr;
-  background-color: #FFFFCB; }
+  grid-template: 1fr / 2fr 1fr; }
 
 .nav-bar-logo {
   grid-column: 1 / 2;
-  padding: 10px; }
+  padding: 10px;
+  margin-left: 20px; }
 
 .menu-container {
   grid-column: 2 / 3;
@@ -34,7 +34,7 @@ body {
   height: 25px;
   justify-self: end;
   align-self: center;
-  color: #e6f2f3; }
+  margin-right: 20px; }
 
 .hmbrgr-menu:hover {
   cursor: pointer; }
@@ -45,30 +45,48 @@ body {
 .nav-link a {
   text-decoration: none; }
 
-.About {
+.about {
   display: grid;
-  grid-template: 1fr / 1fr 1fr;
-  background-color: #FFFFCB;
+  grid-template: 1fr 1fr / 1fr;
   margin-top: 10px; }
-
-.About-photo {
-  align-self: center;
-  background-color: #dcf3ff; }
+  .about-photo {
+    justify-self: center;
+    align-self: center;
+    background-color: #dcf3ff;
+    grid-column: 1/2;
+    grid-row: 1/2; }
+  .about-bio-container {
+    place-self: center;
+    display: flex;
+    flex-direction: column; }
+  .about-bio-container p {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .about-bio-container span {
+    place-self: center;
+    font-size: 4em;
+    grid-row: 1/2; }
+  .about-bio-container h4 {
+    place-self: center;
+    font-size: 2em; }
 
 #Projects {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr;
-  background-color: #FFFFCB;
   margin-top: 10px; }
 
 .project {
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
+  place-self: center;
   padding: 10px; }
-
-.project i {
-  padding-left: 20px; }
+  .project-card {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; }
+    .project-card i {
+      place-self: center; }
+    .project-card-btn {
+      place-self: center; }
 
 #Skills {
   display: grid;
