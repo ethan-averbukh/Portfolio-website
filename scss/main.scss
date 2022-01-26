@@ -3,24 +3,26 @@ $mainBody: #004056;
 $aboutBackground: #FFFFCB;
 $projectsBackground: #FFFFCB;
 $lighterMainColor: #e6f2f3;
-
+$primary-font-size: 14px;
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: $mainBody;
+   //background-color: $mainBody;
     margin: 0px;
+    font-size: $primary-font-size;
 }
 
 .top-nav-bar {
     display: grid;
     grid-template: 1fr / 2fr 1fr;
-    background-color: $mainNav;
+    //background-color: $mainNav;
 }
 
 .nav-bar-logo {
     grid-column: 1 / 2;
     padding: 10px;
+    margin-left: 20px;
 }
 
 .menu-container {
@@ -45,7 +47,8 @@ body {
     height:25px;
     justify-self: end;
     align-self: center;
-    color: $lighterMainColor;
+    margin-right: 20px;
+   // color: $lighterMainColor;
 }
 .hmbrgr-menu:hover {
     cursor: pointer;
@@ -58,36 +61,69 @@ body {
     text-decoration: none;
 }
 
-.About {
+.about {
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    background-color: $aboutBackground;
+    grid-template: 1fr 1fr / 1fr;
+    //background-color: $aboutBackground;
     margin-top: 10px;
+
+    &-photo {
+        justify-self: center;
+        align-self: center;
+        background-color: #dcf3ff;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &-bio-container {
+        place-self: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &-bio-container p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &-bio-container span{
+        place-self: center;
+        font-size: 4em;
+        grid-row: 1/2;
+        
+    }
+    &-bio-container h4{
+        place-self: center;
+        font-size: 2em;
+    }
 }
 
-.About-photo {
-    align-self: center;
-    background-color: #dcf3ff;
-}
 
 
 #Projects {
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr / 1fr;
-    background-color: $projectsBackground;
+    //background-color: $projectsBackground;
     margin-top: 10px;
 }
 
 .project {
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
+    place-self: center;
     padding: 10px;
+   
+
+    &-card {
+        border: 1px solid black;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+
+        & i {
+            place-self: center;
+        }
+        &-btn {
+            place-self: center;
+        }
+    }
 }
 
-.project i {
-    padding-left: 20px;
-}
 
 #Skills {
     display: grid;
