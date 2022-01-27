@@ -14,11 +14,11 @@ Inspired by:
 
 | Day      | Deliverable       | Status     |
 | -------- | ----------------- | ---------- |
-| Day 1 | Complete Worksheet | Incomplete
-| Day 1 | Get reviewed and approved | Incomplete
-| Day 1 | Start HTML, CSS | Incomplete
-| Day 2 | Continue HTML, CSS | Incomplete
-| Day 2 | Begin JS components, clickables,etc... | Incomplete
+| Day 1 | Complete Worksheet | Complete
+| Day 1 | Get reviewed and approved | Complete
+| Day 1 | Start HTML, CSS | Complete
+| Day 2 | Continue HTML, CSS | Complete
+| Day 2 | Begin JS components, clickables,etc... | Complete
 | Day 3 | JS Components to animate Projects | Incomplete
 | Day 4 | Finish up JS Components | Incomplete
 | Day 4 | Attempt to finish CSS | Incomplete
@@ -96,7 +96,7 @@ Inspired by:
 
 ## **Additional Libraries**
 
-The goal is to incorporate Materialize CSS into the site design. Other libraries unknown currently, but will be added if used.
+Materialize CSS: for icons and some components
 
 
 ## **Code Snippets**
