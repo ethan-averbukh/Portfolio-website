@@ -1,11 +1,4 @@
-//Just fixing a commit message
-$mainNav: #264653;
-$mainBody: #e9c46a;
-$aboutBackground: #F4A261;
-$projectsBackground: #E76F51;
-$lighterMainColor: #e4c474;
-$primary-font-size: 14px;
-
+@import "_variables.scss";
 
 @mixin text-gradient {
     background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
@@ -48,7 +41,7 @@ body {
 .top-nav-bar {
     display: grid;
     grid-template: 1fr / 2fr 1fr;
-    background-color: #ffffff;
+    background-color: $mainNav;
 }
 
 .nav-bar-logo {
@@ -103,10 +96,12 @@ body {
     &-bio-title {
         place-self: center;
         display: flex;
+        text-align:center;
         flex-direction: column;
-
+        
         & span{
             place-self: center;
+            font-family: 'Comforter', cursive;
             font-size: 4em;
             grid-row: 1/2;
             @include text-gradient;
@@ -138,19 +133,26 @@ body {
 
 
 #Projects {
-    display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    display: flex;
+    flex-direction: column;
     background-color: #F4A261;
     width: 100vw;
+    
 }
 
 .project {
     place-self: center;
     padding: 10px;
-    
+   
     &-title {
+        background-color: #F4A261;
+        width: 100vw;
+        margin: 0px;
+        padding-bottom: 10px;
+        padding-top: 10px;
         font-size: 3em;
-        place-self: center;
+        text-align: center;
+       
     }
     &-card {
         margin-bottom: 20px;
@@ -175,6 +177,7 @@ body {
 #Skills {
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+    background-color: $mainBody;
 }
 
 .skills {
@@ -194,4 +197,72 @@ body {
 #contact-footer {
     display: flex;
     flex-direction: row;
+}
+
+
+//Carousel CSS
+
+.slideshow-container {
+    position: relative;
+    height: 400px;
+    top: 50%;
+    // transform: translateY(0%);
+    overflow: hidden;
+
+    div {
+      position: absolute;
+      transition: transform 2s, left 1s, opacity 1s, z-index 0s;
+      opacity: 1;
+      height: 300px;
+      justify-self: center;
+      
+        img {
+            width: 250px;
+            transition: width 1s;
+        }
+        &.slide-prev {
+            z-index: 5;
+            left: 30%;
+            transform: translateY(50px) translateX(-50%);
+
+            img {
+                width: 250px;
+            }
+        }
+        &.slide-current {
+            z-index: 10;
+            left:50%;
+            transform: translateY(0px) translateX(-50%);
+
+        }
+        &.slide-next {
+            z-index: 5;
+            left: 70%;
+            transform: translateY(50px) translateX(-50%);
+            img {
+                width: 250px;
+            }
+        }
+        &.slide-left{
+            z-index: 3;
+            left: 15%;
+            transform: translateY(50px) translateX(-50%);
+        }
+        &.slide-right {
+            z-index:3;
+            left: 85%;
+            transform: translateY(50px) translateX(-50%);
+        }
+
+    }
+}
+
+.prev, .next {
+    display:inline;
+    background-color: #F4A261;
+}
+
+.prev {
+    position: relative;
+    top: 70%;
 }
