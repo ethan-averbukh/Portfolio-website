@@ -6,9 +6,15 @@
         
         <!-- <link type="text/css" rel="stylesheet"
          href="css/sass/materialize.scss"  media="screen,projection"/> -->
-         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
-         <link rel="stylesheet"  href="/css/main.css">
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet"> -->
+        <link rel="stylesheet"  href="/css/main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
                 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
                 crossorigin="anonymous">
         </script>
@@ -39,36 +45,37 @@
         </header>
         <section id="About-Me" class="about">
             <div class="about-bio-title">
-                <span>Welcome!</span>
-                <h2>Hi, I am Ethan.</h2>
+                <span>Ethan </br>Averbukh</span>
+                <h2>I am a software engineer with a current focus on full stack web development.</h2>
             </div>
             <div class="about-bio-dscrpt">
-                <p>
-                I am a software engineer with a current focus on full stack web development.
-                My bottom-up, detail centric approach to development results in user friendly and accessible applications. 
-                Give me a challenge, I love challenges.
+                <p>                   
+                    My bottom-up, detail centric approach to development results in user friendly and accessible applications. 
+                    Give me a challenge, I love challenges.
                 </p>
             </div>
         </section>
-        <section id="Projects" class="project">
-            <h2 class="project-title">Projects</h2>
-            <div class="project-card">
-                <i class="material-icons">computer</i>
-                <button class="project-card-btn material-icons">add</button>
+        <!-- Projects Section: Includes a Carousel structure -->
+        <h2 class="project-title">Projects</h2>
+        <section id="Projects" class="project slideshow-container">
+            <div class="project-card slide-prev">
+                <img src="https://picsum.photos/200/300/?blur" alt="Placeholder">
+                <!-- <i class="material-icons">computer</i>
+                <button class="project-card-btn material-icons">add</button> -->
             </div>
-            <div class="project-card">
-                <i class="material-icons">computer</i>
-                <button class="project-card-btn material-icons">add</button>
+            <div class="project-card slide-current">
+                <img src="https://picsum.photos/200/300/?blur" alt="Placeholder">
+                <!-- <i class="material-icons">computer</i>
+                <button class="project-card-btn material-icons">add</button> -->
             </div>
-            <div class="project-card">
-                <i class="material-icons">computer</i>
-                <button class="project-card-btn material-icons">add</button>
-            </div>
-            <div class="project-card">
-                <i class="material-icons">computer</i>
-                <button class="project-card-btn material-icons">add</button>
-            </div>
+            <div class="project-card slide-next">
+                <img src="https://picsum.photos/200/300/?blur" alt="Placeholder">
+                 <!-- <i class="material-icons">computer</i>
+                <button class="project-card-btn material-icons">add</button> -->
+            </div>       
         </section>
+        <!-- <a class="prev material-icons">arrow_back</a>
+        <a class="next material-icons">arrow_forward</a> -->
         <section id="Skills" class="skills">
             <h1 class="skills-title">Skills</h1>
             <div class="skills-card">
@@ -84,11 +91,11 @@
                 <div class="skills-dscrptn"></div>
             </div>
         </section>
-        <footer id = "contact-footer">
-            <!-- <form action="input">
+        <!--<footer id = "contact-footer">
+             <form action="input">
                 <input type="email" name="Email Contact" id="Email">
                 <input type="submit" value="">    
-            </form> -->
-        </footer>
+            </form>
+        </footer>-->
     </body>
 </html>
