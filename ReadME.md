@@ -98,6 +98,12 @@ Inspired by:
 
 Materialize CSS: for icons and some components
 
+gradient idea help:
+https://www.sliderrevolution.com/resources/css-animated-background/
+https://orangeable.com/css/animated-gradient-text
+
+Keyframes help:
+https://www.simplilearn.com/tutorials/css-tutorial/css-keyframes
 
 ## **Code Snippets**
 

@@ -1,3 +1,19 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes animated_text {
+  0% {
+    background-position: 0px 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0px 50%; } }
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,7 +22,8 @@ body {
 
 .top-nav-bar {
   display: grid;
-  grid-template: 1fr / 2fr 1fr; }
+  grid-template: 1fr / 2fr 1fr;
+  background-color: #ffffff; }
 
 .nav-bar-logo {
   grid-column: 1 / 2;
@@ -34,7 +51,8 @@ body {
   height: 25px;
   justify-self: end;
   align-self: center;
-  margin-right: 20px; }
+  margin-right: 20px;
+  color: #e4c474; }
 
 .hmbrgr-menu:hover {
   cursor: pointer; }
@@ -48,53 +66,113 @@ body {
 .about {
   display: grid;
   grid-template: 1fr 1fr / 1fr;
-  margin-top: 10px; }
-  .about-photo {
-    justify-self: center;
-    align-self: center;
-    background-color: #dcf3ff;
-    grid-column: 1/2;
-    grid-row: 1/2; }
-  .about-bio-container {
+  background: linear-gradient(50deg, #E76F51 10%, #F4A261 20%, #264653 30%, #e9c46a 40%);
+  background-size: 400% 400%;
+  animation: gradient 20s ease-in-out infinite; }
+  .about-bio-title {
     place-self: center;
     display: flex;
     flex-direction: column; }
-  .about-bio-container p {
+    .about-bio-title span {
+      place-self: center;
+      font-size: 4em;
+      grid-row: 1/2;
+      background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
+      background-size: 300%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated_text 20s ease-in infinite;
+      -moz-animation: animated_text 20s ease-in infinite;
+      -webkit-animation: animated_text 20s ease-in infinite; }
+    .about-bio-title h4 {
+      place-self: center;
+      font-size: 2em;
+      margin-bottom: 0px;
+      background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
+      background-size: 300%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated_text 20s ease-in infinite;
+      -moz-animation: animated_text 20s ease-in infinite;
+      -webkit-animation: animated_text 20s ease-in infinite; }
+    .about-bio-title h2 {
+      place-self: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
+      background-size: 300%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animated_text 20s ease-in infinite;
+      -moz-animation: animated_text 20s ease-in infinite;
+      -webkit-animation: animated_text 20s ease-in infinite; }
+  .about-bio-dscrpt p {
     margin-left: 10px;
-    margin-right: 10px; }
-  .about-bio-container span {
-    place-self: center;
-    font-size: 4em;
-    grid-row: 1/2; }
-  .about-bio-container h4 {
-    place-self: center;
-    font-size: 2em; }
+    margin-right: 10px;
+    text-align: center;
+    background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
+    background-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 20s ease-in infinite;
+    -moz-animation: animated_text 20s ease-in infinite;
+    -webkit-animation: animated_text 20s ease-in infinite; }
 
 #Projects {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr;
-  margin-top: 10px; }
+  background-color: #F4A261;
+  width: 100vw; }
 
 .project {
   place-self: center;
   padding: 10px; }
+  .project-title {
+    font-size: 3em;
+    place-self: center; }
   .project-card {
-    border: 1px solid black;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 25vw;
+    place-self: center; }
     .project-card i {
       place-self: center; }
     .project-card-btn {
-      place-self: center; }
+      place-self: center;
+      background: none;
+      box-shadow: none;
+      border: none; }
 
 #Skills {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr / 1fr; }
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr; }
 
-.skill {
+.skills {
   justify-self: center;
   padding: 10px; }
+  .skills-title {
+    grid-column: 1/3;
+    justify-self: center;
+    font-size: 3em; }
+  .skills-card {
+    place-self: center; }
 
 #contact-footer {
   display: flex;

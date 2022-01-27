@@ -1,14 +1,45 @@
-$mainNav: #FFFFCB;
-$mainBody: #004056;
-$aboutBackground: #FFFFCB;
-$projectsBackground: #FFFFCB;
-$lighterMainColor: #e6f2f3;
+$mainNav: #264653;
+$mainBody: #e9c46a;
+$aboutBackground: #F4A261;
+$projectsBackground: #E76F51;
+$lighterMainColor: #e4c474;
 $primary-font-size: 14px;
+
+
+@mixin text-gradient {
+    background: linear-gradient(-90deg, #000000, #000000, #ffffff, #ffffff);
+    background-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 20s ease-in infinite;
+    -moz-animation: animated_text 20s ease-in infinite;
+    -webkit-animation: animated_text 20s ease-in infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@keyframes animated_text {
+    0% { background-position: 0px 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0px 50%; }
+}
 
 body {
     display: flex;
     flex-direction: column;
-   //background-color: $mainBody;
     margin: 0px;
     font-size: $primary-font-size;
 }
@@ -16,7 +47,7 @@ body {
 .top-nav-bar {
     display: grid;
     grid-template: 1fr / 2fr 1fr;
-    //background-color: $mainNav;
+    background-color: #ffffff;
 }
 
 .nav-bar-logo {
@@ -48,7 +79,7 @@ body {
     justify-self: end;
     align-self: center;
     margin-right: 20px;
-   // color: $lighterMainColor;
+   color: $lighterMainColor;
 }
 .hmbrgr-menu:hover {
     cursor: pointer;
@@ -64,62 +95,77 @@ body {
 .about {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-    //background-color: $aboutBackground;
-    margin-top: 10px;
+    background: linear-gradient(50deg, $projectsBackground 10%, $aboutBackground 20%, $mainNav 30%, $mainBody 40%);
+    background-size: 400% 400%;
+    animation: gradient 20s ease-in-out infinite;
 
-    &-photo {
-        justify-self: center;
-        align-self: center;
-        background-color: #dcf3ff;
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    &-bio-container {
+    &-bio-title {
         place-self: center;
         display: flex;
         flex-direction: column;
+
+        & span{
+            place-self: center;
+            font-size: 4em;
+            grid-row: 1/2;
+            @include text-gradient;
+            
+        }
+        & h4{
+            place-self: center;
+            font-size: 2em;
+            margin-bottom: 0px;
+            @include text-gradient;
+        }
+        & h2 {
+            place-self:center;
+            margin-left: 10px;
+            margin-right: 10px;
+            @include text-gradient;
+        }
     }
-    &-bio-container p {
+    
+    &-bio-dscrpt p {
         margin-left: 10px;
         margin-right: 10px;
-    }
-    &-bio-container span{
-        place-self: center;
-        font-size: 4em;
-        grid-row: 1/2;
+        text-align: center;
+        @include text-gradient;
         
     }
-    &-bio-container h4{
-        place-self: center;
-        font-size: 2em;
-    }
-}
 
+}
 
 
 #Projects {
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr / 1fr;
-    //background-color: $projectsBackground;
-    margin-top: 10px;
+    background-color: #F4A261;
+    width: 100vw;
 }
 
 .project {
     place-self: center;
     padding: 10px;
-   
-
+    
+    &-title {
+        font-size: 3em;
+        place-self: center;
+    }
     &-card {
-        border: 1px solid black;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
+        width: 25vw;
+        place-self: center;
 
         & i {
             place-self: center;
         }
         &-btn {
             place-self: center;
+            background: none;
+            box-shadow: none;
+            border: none;
         }
     }
 }
@@ -127,12 +173,21 @@ body {
 
 #Skills {
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / 1fr;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
 }
 
-.skill {
+.skills {
     justify-self: center;
     padding: 10px;
+
+    &-title {
+        grid-column: 1/3;
+        justify-self: center;
+        font-size:3em;
+    }
+    &-card {
+        place-self: center;
+    }
 }
 
 #contact-footer {
