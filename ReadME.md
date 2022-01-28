@@ -164,3 +164,5 @@ The piece of code below is the main selector and movement section of the carouse
 
     }
 ```
+
+ Maintaining appropriate size for the carousel cards is currently having some issues. When the cards are clicked one too many times they resize from the container size, to the default image size. (Resolution in progress)
