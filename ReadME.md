@@ -19,9 +19,9 @@ Inspired by:
 | Day 1 | Start HTML, CSS | Complete
 | Day 2 | Continue HTML, CSS | Complete
 | Day 2 | Begin JS components, clickables,etc... | Complete
-| Day 3 | JS Components to animate Projects | Incomplete
-| Day 4 | Finish up JS Components | Incomplete
-| Day 4 | Attempt to finish CSS | Incomplete
+| Day 3 | JS Components to animate Projects | Complete
+| Day 4 | Finish up JS Components | Complete
+| Day 4 | Attempt to finish CSS | Complete
 | Day 5 | Finish any css still remaining | Incomplete
 | Day 5 | Last bug fixes & Touchups | Incomplete
 | Day 6 | Present | Incomplete
@@ -98,23 +98,69 @@ Inspired by:
 
 Materialize CSS: for icons and some components
 
-gradient idea help:
-https://www.sliderrevolution.com/resources/css-animated-background/
-https://orangeable.com/css/animated-gradient-text
 
-Keyframes help:
-https://www.simplilearn.com/tutorials/css-tutorial/css-keyframes
 
 ## **Code Snippets**
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description
 
-`//Here is the code that I will be proud of once it is written`
 
+```
+@mixin text-gradient {
+    background: linear-gradient(-90deg, #161F6D, #161F6D, #ffffff, #ffffff);
+    background-size: 300%;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 20s ease-in infinite;
+    -moz-animation: animated_text 20s ease-in infinite;
+    -webkit-animation: animated_text 20s ease-in infinite;
+}
+```
+
+
+## Sources Used for Inspiration
+
+gradient idea help:
+[Gradient CSS](https://www.sliderrevolution.com/resources/css-animated-background/)
+[Animated Gradient](https://orangeable.com/css/animated-gradient-text)
+
+Keyframes help:
+[Keyframes syntax](https://www.simplilearn.com/tutorials/css-tutorial/css-keyframes)
+
+Projects:
+[Carousel](https://codepen.io/dobladov/pen/kXAXJx)
+
+
+[Anchor Links](https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html)
 
 ## **Issues and Resolutions**
 
-Use this section to list all of the major issues encountered and their resolution.
+The piece of code below is the main selector and movement section of the carousel. So far, can not figure out why the carousel is behaving in correctly in the next direction. When more than 3 elements are added to the carousel strange behavior occurs to all the elements.
+```
+   let moveToSelected =  function(element) {
+       //Conditional checks to see which element in carousel is selected.
+       
+        let selected;
+        if (element == "next") {
+        selected = $(".slide-current").next();
+        } else if (element == "prev") {
+        selected = $(".slide-current").prev();
+        } else {
+        selected = element;
+        }
+        // jQuery function that selects the next and prev sibling of the selected element
+        let next = $(selected).next();
+        let prev = $(selected).prev();
+        // let secondNext = $(next).next();
+        // let secondPrev = $(prev).prev();
+    
+        // Changing the class of the selected element which forces a position change in the carousel
+        $(selected).removeClass().addClass("project-card slide-current");
+        // Changing the class of the other elements to re-slot into the next and prev position
+        $(prev).removeClass().addClass("project-card slide-prev");
+        $(next).removeClass().addClass("project-card slide-next");
 
-SAMPLE..... ERROR: app.js:34 
-Uncaught SyntaxError: Unexpected identifier RESOLUTION: Missing comma after first object in sources {} object
+    }
+```
