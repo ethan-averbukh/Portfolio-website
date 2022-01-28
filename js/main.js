@@ -44,10 +44,10 @@ $(()=> {
         // let secondPrev = $(prev).prev();
     
         // Changing the class of the selected element which forces a position change in the carousel
-        $(selected).removeClass().addClass("slide-current");
+        $(selected).removeClass().addClass("project-card slide-current");
         // Changing the class of the other elements to re-slot into the next and prev position
-        $(prev).removeClass().addClass("slide-prev");
-        $(next).removeClass().addClass("slide-next");
+        $(prev).removeClass().addClass("project-card slide-prev");
+        $(next).removeClass().addClass("project-card slide-next");
 
         // $(secondNext).removeClass().addClass("slide-left");
         // $(secondPrev).removeClass().addClass("slide-right")
