@@ -1,9 +1,17 @@
 $(()=> {
+
+    //Handling the hamburger menu click to open menu
     let $hmbrgrIcon = $('.hmbrgr-menu');
     let $dropDownMenu = $('div.menu-container');
     let $body = $('body');
 
     $hmbrgrIcon.on('click', function() {
+        $dropDownMenu.toggleClass("dropdown-content");
+    });
+    // Handling close open menu when close button is clicked
+    let $closeBtn = $('.close-btn');
+
+    $closeBtn.on('click', function(){
         $dropDownMenu.toggleClass("dropdown-content");
     });
 
@@ -24,16 +32,16 @@ $(()=> {
     
         let next = $(selected).next();
         let prev = $(selected).prev();
-        let secondNext = $(next).next();
-        let secondPrev = $(prev).prev();
+        // let secondNext = $(next).next();
+        // let secondPrev = $(prev).prev();
     
         $(selected).removeClass().addClass("slide-current");
     
         $(prev).removeClass().addClass("slide-prev");
         $(next).removeClass().addClass("slide-next");
 
-        $(secondNext).removeClass().addClass("slide-left");
-        $(secondPrev).removeClass().addClass("slide-right")
+        // $(secondNext).removeClass().addClass("slide-left");
+        // $(secondPrev).removeClass().addClass("slide-right")
     
     }
     
