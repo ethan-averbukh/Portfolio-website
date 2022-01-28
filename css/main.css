@@ -23,7 +23,7 @@ body {
 
 .top-nav-bar {
   display: grid;
-  grid-template: 1fr / 2fr 1fr;
+  grid-template: 1fr / 1fr 1fr;
   background-color: #161F6D; }
 
 .nav-bar-logo {
@@ -47,6 +47,8 @@ body {
     color: white;
     position: absolute;
     right: 0; }
+    .menu-container .close-btn:hover {
+      cursor: pointer; }
 
 /* Only exist when hmbrgr menu is clicked */
 .dropdown-content {
@@ -158,39 +160,61 @@ body {
   .project-card {
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
     place-self: center; }
-    .project-card i {
-      place-self: center; }
-    .project-card-btn {
-      place-self: center;
-      background: none;
-      box-shadow: none;
-      border: none; }
 
 #Skills {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   background-color: #00ABE1; }
 
 .skills {
   justify-self: center;
   padding: 10px; }
   .skills-title {
-    grid-column: 1/3;
+    grid-column: 1/6;
     justify-self: center;
     font-size: 3em;
     color: #161F6D; }
   .skills-card {
     place-self: center;
     text-align: center; }
+    .skills-card:first-of-type {
+      grid-column: 1/2; }
+    .skills-card:nth-of-type(2) {
+      grid-column: 2/4; }
     .skills-card .material-icons {
       font-size: 50px;
       color: orange; }
 
-#contact-footer {
+.contact {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  color: #161F6D;
+  margin-bottom: 20px; }
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5em; }
+  .contact-title {
+    font-size: 3em; }
+  .contact-text {
+    padding-right: 20px; }
+  .contact-link a {
+    text-decoration: underline;
+    color: #161F6D; }
+
+#Contact-Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5vh;
+  background-color: #161F6D; }
+  #Contact-Footer div {
+    color: white;
+    place-self: center; }
 
 .slideshow-container {
   position: relative;
@@ -202,11 +226,12 @@ body {
     position: absolute;
     transition: transform 2s, left 1s, opacity 1s, z-index 0s;
     opacity: 1;
-    height: 300px;
+    height: 400px;
     justify-self: center; }
     .slideshow-container div img {
       width: 250px;
-      transition: width 1s; }
+      transition: width 1s;
+      border: 1px solid black; }
     .slideshow-container div.slide-prev {
       z-index: 5;
       left: 35%;
@@ -223,14 +248,24 @@ body {
       transform: translateY(50px) translateX(-50%); }
       .slideshow-container div.slide-next img {
         width: 250px; }
-    .slideshow-container div.slide-left {
-      z-index: 3;
-      left: 20%;
-      transform: translateY(50px) translateX(-50%); }
-    .slideshow-container div.slide-right {
-      z-index: 3;
-      left: 75%;
-      transform: translateY(50px) translateX(-50%); }
+    .slideshow-container div.project-card {
+      text-align: center;
+      color: white; }
+      .slideshow-container div.project-card-name {
+        height: 50px;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-20%, -20%);
+        font-size: 2em; }
+      .slideshow-container div.project-card-link {
+        position: relative; }
+      .slideshow-container div.project-card-link a {
+        position: absolute;
+        left: 50%;
+        text-decoration: none;
+        color: black;
+        font-size: 1.5em; }
 
 .prev, .next {
   display: inline; }
@@ -242,3 +277,57 @@ body {
 .fa-html5 {
   font-size: 4em;
   color: #13ddcc; }
+
+.fa-js {
+  font-size: 4em;
+  color: #13ddcc; }
+
+.fa-css3 {
+  font-size: 4em;
+  color: #13ddcc; }
+
+@media only screen and (min-width: 768px) {
+  .top-nav-bar {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    background-color: #161F6D; }
+    .top-nav-bar a {
+      grid-column: 1/2; }
+  .slideshow-container {
+    position: relative;
+    height: 500px;
+    top: 50%;
+    transform: translateY(0%);
+    overflow: hidden; }
+    .slideshow-container div img {
+      width: 300px; }
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 20em; }
+    .menu-container .spacer {
+      display: none; }
+    .menu-container .close-btn {
+      display: none; }
+      .menu-container .close-btn:hover {
+        cursor: pointer; }
+    .menu-container .nav-link {
+      padding-right: 50px; }
+      .menu-container .nav-link a {
+        color: white;
+        font-size: 1.2em; }
+      .menu-container .nav-link a:hover {
+        background-color: white;
+        color: #161F6D; }
+  .dropdown-content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent; }
+    .dropdown-content .nav-link a {
+      color: white; }
+  .hmbrgr-menu {
+    display: none; } }

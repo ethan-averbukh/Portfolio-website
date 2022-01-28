@@ -40,7 +40,7 @@ body {
 
 .top-nav-bar {
     display: grid;
-    grid-template: 1fr / 2fr 1fr;
+    grid-template: 1fr / 1fr 1fr;
     background-color: $mainNav;
 }
 
@@ -53,7 +53,6 @@ body {
         color: $lighterMainColor;
     }
 }
-
 
 .menu-container {
     grid-column: 2 / 3;
@@ -71,6 +70,10 @@ body {
         color:white;
         position:absolute;
         right: 0;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 /* Only exist when hmbrgr menu is clicked */
@@ -156,7 +159,6 @@ body {
 
 }
 
-
 #Projects {
     display: flex;
     flex-direction: column;
@@ -183,25 +185,13 @@ body {
     &-card {
         margin-bottom: 20px;
         display: flex;
-        flex-direction: column;
         place-self: center;
-
-        & i {
-            place-self: center;
-        }
-        &-btn {
-            place-self: center;
-            background: none;
-            box-shadow: none;
-            border: none;
-        }
     }
 }
 
-
 #Skills {
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
     background-color: $mainBody;
 }
 
@@ -210,7 +200,7 @@ body {
     padding: 10px;
 
     &-title {
-        grid-column: 1/3;
+        grid-column: 1/6;
         justify-self: center;
         font-size:3em;
         color: $fontTitleColor;
@@ -218,7 +208,12 @@ body {
     &-card {
         place-self: center;
         text-align:center;
-
+        &:first-of-type {
+            grid-column: 1/2;
+        }
+        &:nth-of-type(2) {
+            grid-column: 2/4;
+        }
         .material-icons {
             font-size: 50px;
             color: orange;
@@ -226,9 +221,42 @@ body {
     }
 }
 
-#contact-footer {
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    background-color: white;
+    color: $fontTitleColor;
+    margin-bottom: 20px;
+    &-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+    &-title {
+        font-size:3em;
+    }
+    &-text {
+        padding-right: 20px;
+    }
+    &-link a{
+        text-decoration: underline;
+        color: $fontTitleColor;
+
+    }
+}
+#Contact-Footer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    height: 5vh;
+    background-color: $mainNav;
+
+    div {
+        color: white;
+        place-self: center;
+    }
 }
 
 //Carousel CSS
@@ -243,12 +271,13 @@ body {
       position: absolute;
       transition: transform 2s, left 1s, opacity 1s, z-index 0s;
       opacity: 1;
-      height: 300px;
+      height: 400px;
       justify-self: center;
       
         img {
             width: 250px;
             transition: width 1s;
+            border: 1px solid black;
         }
         &.slide-prev {
             z-index: 5;
@@ -273,16 +302,39 @@ body {
                 width: 250px;
             }
         }
-        &.slide-left{
-            z-index: 3;
-            left: 20%;
-            transform: translateY(50px) translateX(-50%);
+        &.project-card {
+           
+            text-align:center;
+            color:white;
+            &-name {
+                height: 50px;
+                position:absolute;
+                top:40%;
+                left: 40%;
+                transform: translate(-20%, -20%);
+                font-size: 2em;
+            }
+            &-link {
+                position:relative;
+            }
+            &-link a{
+                position:absolute;
+                left: 50%;
+                text-decoration: none;
+                color: black;
+                font-size: 1.5em;
+            }
         }
-        &.slide-right {
-            z-index:3;
-            left: 75%;
-            transform: translateY(50px) translateX(-50%);
-        }
+        // &.slide-left{
+        //     z-index: 3;
+        //     left: 20%;
+        //     transform: translateY(50px) translateX(-50%);
+        // }
+        // &.slide-right {
+        //     z-index:3;
+        //     left: 75%;
+        //     transform: translateY(50px) translateX(-50%);
+        // }
     }
 }
 
@@ -298,7 +350,92 @@ body {
 
 
 //Icons Sizing
-.fa-html5 {
-    font-size: 4em;
-    color: rgb(19, 221, 204);
+.fa {
+   &-html5{ 
+        font-size: 4em;
+        color: rgb(19, 221, 204);
+    }
+    &-js{
+        font-size: 4em;
+        color: rgb(19, 221, 204);
+    }
+    &-css3 {
+        font-size: 4em;
+        color: rgb(19, 221, 204);
+    }
+}
+
+//Tablet and Desktop resizing
+@media only screen and (min-width: 768px) {
+    .top-nav-bar {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        background-color: $mainNav;
+
+        a {
+          grid-column: 1/2;  
+        }
+    }
+
+    .slideshow-container {
+        position: relative;
+        height: 500px;
+        top: 50%;
+        transform: translateY(0%);
+        overflow: hidden;
+    
+        div {         
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    .menu-container {
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 100%;
+        margin-right: 10px;
+        margin-left: 20em;
+        & .spacer {
+            display:none
+        }
+    
+        & .close-btn {
+           display:none;
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        & .nav-link {
+            padding-right: 50px;
+            a {
+            color: white;
+            font-size: 1.2em;
+            }
+            a:hover {
+                background-color: white;
+                color: $fontTitleColor;
+            }
+        }
+    }
+    .dropdown-content {
+        display: flex;
+        flex-direction: row;
+        position:relative;
+        background-color: transparent;
+    
+        & .nav-link a{
+            color: white;
+        }
+    }
+    .hmbrgr-menu {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
 }
