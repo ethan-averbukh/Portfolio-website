@@ -49,9 +49,6 @@ $(()=> {
         $(prev).removeClass().addClass("project-card slide-prev");
         $(next).removeClass().addClass("project-card slide-next");
 
-        // $(secondNext).removeClass().addClass("slide-left");
-        // $(secondPrev).removeClass().addClass("slide-right")
-    
     }
     
     // Keyboard events tracker
